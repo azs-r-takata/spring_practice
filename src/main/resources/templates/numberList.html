@@ -2,16 +2,14 @@
 <html xmlns:th="https://www.thymeleaf.org">
 	<head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Spring Bootの基礎を学ぼう</title>
+        <meta name="numberList" content="width=device-width, initial-scale=1">
+        <title>TERAKOYA課題</title>
     </head>
     <body>
-		<ul>
-		    <li th:each="number : ${#numbers.sequence(1,20)}">
-			    <div th:if="${number % 3 eq 0}">
-				    <p th;text="${list}"></p>
-			    </div>
-		    </li>
-		 </ul>
+		<ul th:each="number : ${#numbers.sequence(1,20)}">
+			<div th:if="${number % 3 == 0}">
+				<li th:text="${number}"></li>
+			</div>
+		</ul>
      </body>
 </html>
