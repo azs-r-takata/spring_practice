@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>何曜日？</title>
+	</head>
+    <body>
+		<h1>何曜日？</h1>
+		<p th:if="${week == T(java.time.DayOfWeek).MONDAY}">月曜日！今週も頑張りましょう！</p>
+		<p th:if="${week == T(java.time.DayOfWeek).TUESDAY}">火曜日！ちょっと慣れてきた？</p>
+		<p th:if="${week == T(java.time.DayOfWeek).WEDNESDAY}">水曜日！折り返し地点！</p>
+		<p th:if="${week == T(java.time.DayOfWeek).THURSDAY}">木曜日！あと少し</p>
+		<p th:if="${week == T(java.time.DayOfWeek).FRIDAY}">金曜日！週末まであと少し！</p>
+    </body>
+</html>
